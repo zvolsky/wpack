@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Webpack Demo</title>
+    <meta charset="utf-8" />
+    {% block extrahead %}
+      <!--link rel="stylesheet" type="text/css" href="{% static 'project/js/app.css' %}"-->
+      <script src="{% static 'project/js/styles.js' %}"></script>
+    {% endblock extrahead %}
+  </head>
+  <body>
+    <!--https://getbootstrap.com/docs/4.0/examples/navbars/-->
+    <div class="container">
+        <div class="row">
+          <h1>wpack</h1>
+        </div>
+        <div class="row">
+        {% block content %}
+        {% endblock content %}
+      </div>
+    </div>
+    <script src="{% static 'project/js/project.js' %}"></script>
+  </body>
+</html>
